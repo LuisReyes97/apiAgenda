@@ -1,0 +1,23 @@
+{
+  "name": "apiAgenda",
+  "version": "1.0.0",
+  "description": "api en NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisReyes97/apiAgenda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisReyes97/apiAgenda/issues"
+  },
+  "homepage": "https://github.com/LuisReyes97/apiAgenda#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
