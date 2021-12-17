@@ -2,6 +2,8 @@ const express = require('express')
 const mysql = require('mysql');
 const myconn = require('express-myconnection')
 
+const routes = require('./routes')
+
 //configuraciones e inicializaciones
 const app = express()
 app.set('port', process.env.PORT || 9000)
@@ -15,15 +17,14 @@ const dbAgenda = {
 
 //middleware
 app.use(myconn(mysql, dbAgenda, 'single'))
+app.use(express.json())
 
 // rutas
 app.get('/',(req, res) =>{
     res.send('corriendo')
 })
 
-app.get('/api', (req, res)=>{
-    res.send('hola')
-})
+app.use('/api', routes)
 
 
 
