@@ -1,5 +1,5 @@
 const express = require('express')
-const mysql = requiere('mysql')
+const mysql = require('mysql');
 const myconn = require('express-myconnection')
 
 //configuraciones e inicializaciones
@@ -7,7 +7,7 @@ const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbAgenda = {
     host: 'localhost',
-    port: 3306,
+    port: 8889,
     user: 'root',
     password: 'root',
     database: 'agenda'
@@ -20,6 +20,12 @@ app.use(myconn(mysql, dbAgenda, 'single'))
 app.get('/',(req, res) =>{
     res.send('corriendo')
 })
+
+app.get('/api', (req, res)=>{
+    res.send('hola')
+})
+
+
 
 //iniciando servidor
 
